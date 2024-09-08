@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // Desafio Super Trunfo - Países
-// Tema 2 - Nivel novato
+// Tema 2 - Nivel aventureiro
 
 int main() {
     //Difinição de variaveis
