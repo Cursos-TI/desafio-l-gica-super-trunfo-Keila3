@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // Desafio Super Trunfo - Países
-// Tema 2 - Nivel aventureiro
+// Tema 2 - Nivel Mestre
 
 int main() {
     //Difinição de variaveis
@@ -130,7 +130,7 @@ int main() {
         printf("Número de pontos túristicos: %d\n", pontos_turistico2);
         break;
         case 3: //Menu interativo 2
-        int num_atributos, opcao1, opcao2, opcao3;
+        int num_atributos;
         printf("Vamos iniciar o jogo, escolha como você quer jogar:\n");
         printf("1.Comparar apenas 1 atributo\n");
         printf("2. Comparar 2 atributos\n");
@@ -139,10 +139,10 @@ int main() {
         scanf("%d", &num_atributos);
 
         if(num_atributos == 1){
-            //compara atributos 1 atributo
+            //comparação de 1 atributo
         printf("\nEscolha um atributo para comparar\n");
         printf("1. População\n");
-        printf("2. Àrea\N");
+        printf("2. Àrea\n");
         printf("3. PIB\n");
         printf("4. Densidade\n");
         printf("5. PIB per capita\n");
@@ -151,8 +151,7 @@ int main() {
         scanf("%d", &opcao);
         
         //comparação dos atributos escolhidos
-        switch (opcao1)
-        {
+        switch (opcao){
         case 1://população
             vitoria_carta1 += (populacao1 > populacao2) ? 1 : 0;
             vitoria_carta2 += (populacao2 > populacao1) ? 1: 0;
@@ -180,13 +179,105 @@ int main() {
         default: 
             printf("Opção inválalida...\n");
             break;
+        }} else if (num_atributos == 2){
+            //comparação de dois atributos
+        int opcao1, opcao2;
+        printf("\nEscolha dois atributos para comparar\n");
+        printf("1. População\n");
+        printf("2. Àrea\n");
+        printf("3. PIB\n");
+        printf("4. Densidade\n");
+        printf("5. PIB per capita\n");
+        printf("6. Super poder\n");
+        printf("Digite sua opção 1: ");
+        scanf("%d", &opcao1);
+        printf("Digite sua opção 2: ");
+        scanf("%d", &opcao2);
+        switch(opcao1){
+            //comparação do atributo 1
+        case 1://população
+            vitoria_carta1 += (populacao1 > populacao2) ? 1 : 0;
+            vitoria_carta2 += (populacao2 > populacao1) ? 1: 0;
+            break;
+        case 2: //area
+            vitoria_carta1 += (area1 > area2) ? 1 : 0;
+            vitoria_carta2 += (area2 > area1) ? 1 : 0;
+            break;
+        case 3: //PIB
+            vitoria_carta1 += (pib1 > pib2) ? 1 : 0;
+            vitoria_carta2 += (pib2 > pib1) ? 1 : 0;
+            break;
+        case 4://Densidade (vence o menor)
+            vitoria_carta1 += (densidade1 < densidade2) ? 1 : 0;
+            vitoria_carta2 += (densidade2 < densidade1) ? 1 : 0;
+            break;
+        case 5://PIb per capita
+            vitoria_carta1 += (pib_per_capita1 > pib_per_capita2) ? 1 : 0;
+            vitoria_carta2 += (pib_per_capita2 > pib_per_capita1) ? 1 : 0;
+            break;
+        case 6:// super poder
+            vitoria_carta1 += (super_poder1 > super_poder2) ? 1 : 0;
+            vitoria_carta2 += (super_poder2 > super_poder1) ? 1 : 0;
+            break;
+        default:
+            printf("Opção invalida...");
+        }
+        switch(opcao2){
+            //comparação do atributo 2
+        case 1://população
+            vitoria_carta1 += (populacao1 > populacao2) ? 1 : 0;
+            vitoria_carta2 += (populacao2 > populacao1) ? 1: 0;
+            break;
+        case 2: //area
+            vitoria_carta1 += (area1 > area2) ? 1 : 0;
+            vitoria_carta2 += (area2 > area1) ? 1 : 0;
+            break;
+        case 3: //PIB
+            vitoria_carta1 += (pib1 > pib2) ? 1 : 0;
+            vitoria_carta2 += (pib2 > pib1) ? 1 : 0;
+            break;
+        case 4://Densidade (vence o menor)
+            vitoria_carta1 += (densidade1 < densidade2) ? 1 : 0;
+            vitoria_carta2 += (densidade2 < densidade1) ? 1 : 0;
+            break;
+        case 5://PIb per capita
+            vitoria_carta1 += (pib_per_capita1 > pib_per_capita2) ? 1 : 0;
+            vitoria_carta2 += (pib_per_capita2 > pib_per_capita1) ? 1 : 0;
+            break;
+        case 6:// super poder
+            vitoria_carta1 += (super_poder1 > super_poder2) ? 1 : 0;
+            vitoria_carta2 += (super_poder2 > super_poder1) ? 1 : 0;
+            break;
+        default:
+            printf("Opção invalida...");
+        }} else if(num_atributos == 3){
+            //Coparação de todos os atributos
+            vitoria_carta1 += (populacao1 > populacao2) ? 1 : 0;
+            vitoria_carta2 += (populacao2 > populacao1) ? 1: 0;
+        
+            vitoria_carta1 += (area1 > area2) ? 1 : 0;
+            vitoria_carta2 += (area2 > area1) ? 1 : 0;
+         
+            vitoria_carta1 += (pib1 > pib2) ? 1 : 0;
+            vitoria_carta2 += (pib2 > pib1) ? 1 : 0;
+          
+            vitoria_carta1 += (densidade1 < densidade2) ? 1 : 0;
+            vitoria_carta2 += (densidade2 < densidade1) ? 1 : 0;
+         
+            vitoria_carta1 += (pib_per_capita1 > pib_per_capita2) ? 1 : 0;
+            vitoria_carta2 += (pib_per_capita2 > pib_per_capita1) ? 1 : 0;
+        
+            vitoria_carta1 += (super_poder1 > super_poder2) ? 1 : 0;
+            vitoria_carta2 += (super_poder2 > super_poder1) ? 1 : 0;
+        } else{
+            printf("Opção invalida...\n");
         }
         break;
-        case 2:
-
+        default:
+            printf("Opção invalida...\n");
         }
-
-       
+        break;  
+        }
 
         //exibição de resultados final
         printf("Resultado da Carta vencedora:\n");
@@ -199,17 +290,14 @@ int main() {
         } else if(vitoria_carta2 > vitoria_carta1){
             printf("Parabens carta 2 venceu!\n");
         } else{
-            printf("AS carta 1 e 2 empatou!\n");
+            printf("As carta 1 e 2 empatou!\n");
         }
         break;
         default:
            printf("Opção invalida\n");
            break;
         
-        }
-
-
-       }
+        
         
        
      
