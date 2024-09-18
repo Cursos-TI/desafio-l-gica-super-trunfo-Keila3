@@ -284,16 +284,16 @@ int main() {
             // Resultado final
             printf("\nResultado da comparação:\n");
             if(vitoria_carta1 > vitoria_carta2) {
-                printf("Carta 1 teve %d pontos/n", vitoria_carta1);
-                printf("Carta 2 teve %d pontos/n", vitoria_carta2);
+                printf("Carta 1 teve %d pontos\n", vitoria_carta1);
+                printf("Carta 2 teve %d pontos\n", vitoria_carta2);
                 printf("Carta 1 vence!\n");
             } else if(vitoria_carta2 > vitoria_carta1) {
-                printf("Carta 1 teve %d pontos/n", vitoria_carta1);
-                printf("Carta 2 teve %d pontos/n", vitoria_carta2);
+                printf("Carta 1 teve %d pontos\n", vitoria_carta1);
+                printf("Carta 2 teve %d pontos\n", vitoria_carta2);
                 printf("Carta 2 vence!\n");
             } else {
-                printf("Carta 1 teve %d pontos/n", vitoria_carta1);
-                printf("Carta 2 teve %d pontos/n", vitoria_carta2);
+                printf("Carta 1 teve %d pontos\n", vitoria_carta1);
+                printf("Carta 2 teve %d pontos\n", vitoria_carta2);
                 printf("Empate!\n");
             }
             break;
